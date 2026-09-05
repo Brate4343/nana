@@ -221,6 +221,8 @@ def home():
     result = run_bot_cycle()
     return f"Bot Calisti: {result}"
 
+import os
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))
     app.run(host="0.0.0.0", port=port)
