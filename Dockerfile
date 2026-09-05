@@ -7,5 +7,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-# Port değişkenini doğrudan shell üzerinden aktarıyoruz
+# Shell form kullanarak $PORT değişkeninin doğru okunmasını sağlıyoruz
 CMD gunicorn bot:app --bind 0.0.0.0:$PORT --workers 1 --threads 2 --timeout 120
